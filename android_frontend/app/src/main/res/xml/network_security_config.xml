@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Configuración de red para desarrollo.
+
+  El backend Java todavía no está desplegado y en local se sirve por HTTP,
+  así que se permite tráfico sin cifrar hacia el host de desarrollo.
+
+  AVISO: cuando el backend esté en producción con HTTPS, cambia
+  cleartextTrafficPermitted a "false" y elimina la base-config.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
